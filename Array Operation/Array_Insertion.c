@@ -11,10 +11,8 @@ int main()
     for(int i= length; i> pos; i--){
         arr[i]= arr[i - 1];
     }
-
     arr[pos] = Value;
     length++;
-
     for(int i = 0; i < length; i++){
         printf("%d ", arr[i]);
     }
