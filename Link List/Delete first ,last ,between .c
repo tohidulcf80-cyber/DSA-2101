@@ -6,14 +6,14 @@ struct Node{
     struct Node *next;
 };
 void linkedListTraversal(struct Node *ptr){
- while (ptr !=NULL){
+ while (ptr!=NULL){
   printf("Element: %d\n", ptr->data);
   ptr =ptr->next;
  }
  
 }
 struct Node *deleteFirst(struct Node *head){
- struct Node *ptr = head;
+ struct Node *ptr= head;
  head = head->next;
  free(ptr);
  return head;
@@ -31,8 +31,8 @@ struct Node *deleteAtIndex(struct Node *head, int index){
     return head;
 }
  struct Node *deleteAtLast(struct Node *head){
- struct Node *p = head;
-  struct Node *q = head->next;
+ struct Node *p =head;
+  struct Node *q =head->next;
 while(q->next != NULL){
     p =p->next; q= q->next;
     }
@@ -42,8 +42,8 @@ while(q->next != NULL){
  return head;
  }
  struct Node *deleteAtValue(struct Node *head, int value){
-  struct Node *p = head;
-  struct Node *q = head->next;
+  struct Node *p =head;
+  struct Node *q= head->next;
 
 while(q->data !=value && q->next !=NULL ){
      p = p->next;
